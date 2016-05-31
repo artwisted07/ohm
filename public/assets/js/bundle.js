@@ -29803,13 +29803,16 @@ var OhmSection = function (_React$Component) {
             var _props$colors = this.props.colors;
             var colors = _props$colors === undefined ? [] : _props$colors;
 
-
+            var styles = {
+                backgroundColor: this.state.color,
+                transition: "all .3s ease-out"
+            };
             return _react2.default.createElement(
                 "div",
                 { className: "medium-3 column" },
                 _react2.default.createElement(
                     "div",
-                    { className: "colorSection" },
+                    { className: "colorSection", style: styles },
                     _react2.default.createElement(
                         "h3",
                         null,
@@ -29817,7 +29820,6 @@ var OhmSection = function (_React$Component) {
                         this.props.section,
                         " "
                     ),
-                    " ",
                     _react2.default.createElement(
                         "label",
                         null,
@@ -29836,14 +29838,10 @@ var OhmSection = function (_React$Component) {
                                     color,
                                     " "
                                 );
-                            }),
-                            " "
-                        ),
-                        " "
-                    ),
-                    " "
-                ),
-                " "
+                            })
+                        )
+                    )
+                )
             );
         }
     }, {
